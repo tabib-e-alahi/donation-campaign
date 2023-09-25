@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { saveDonatedCard } from "../../utilities/localStorage";
 
 const DonationDetails = () => {
   const cardDetails = useLoaderData();
@@ -8,12 +9,16 @@ const DonationDetails = () => {
   const id = useParams();
   const intId = parseInt(id.id);
 
-  console.log(cardDetails);
+//   console.log(cardDetails);
   const donationDetails = cardDetails.find(
     (cardDetail) => cardDetail.id === intId
   );
   const { cover_img, title, description, price, text_button_bg } =
     donationDetails;
+
+    const handleDonatedCard = () =>{
+saveDonatedCard(intId);
+    }
 
   return (
     <div>
@@ -23,7 +28,7 @@ const DonationDetails = () => {
           <img className="w-full h-[700px] " src={cover_img} alt="" />
           <div className="absolute bottom-0 bg-[#0B0B0B80] p-10 w-full rounded-b-lg">
             <div className="bg-opacity-95 w-full"></div>
-            <button
+            <button onClick={handleDonatedCard}
               className="px-7 py-4 text-white rounded"
               style={{ backgroundColor: text_button_bg }}
             >
