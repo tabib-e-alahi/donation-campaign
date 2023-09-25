@@ -1,13 +1,19 @@
 // import PropTypes from 'prop-types';
 
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Cards from "../Cards/Cards";
+import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 
+
 const Home = () => {
-  const cards = useLoaderData();
-  // console.log(cards);
+ const [cards,setCards] = useState([]);
+ useEffect(()=>{
+  fetch('category_cards.json')
+  .then(res => res.json())
+  .then(data => setCards(data))
+ },[])
 
   return (
     <>
