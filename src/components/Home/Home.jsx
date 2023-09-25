@@ -1,13 +1,17 @@
 // import PropTypes from 'prop-types';
 
+import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Cards from "../Cards/Cards";
 import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
+  const cards = useLoaderData();
+  // console.log(cards);
+
   return (
     <>
-      <header className="mb-24">
+      <header className="mb-28">
         <div
           className="hero  bg-cover"
           style={{
@@ -21,8 +25,19 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <main>
-        <Cards></Cards>
+
+      <main className="max-w-7xl  mx-auto mb-44">
+
+        <div className="grid grid-cols-4 gap-5">
+
+          {
+
+            cards.map(card => <Cards key={card.id} card={card}></Cards>)
+
+          }
+
+        </div>
+
       </main>
     </>
   );
