@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const DonatedCard = (donatedCard) => {
-    console.log(donatedCard);
+    // console.log(donatedCard);
   const {
     img,
     title,

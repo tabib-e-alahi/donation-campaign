@@ -9,17 +9,24 @@ import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
  const [cards,setCards] = useState([]);
+
  useEffect(()=>{
   fetch('category_cards.json')
   .then(res => res.json())
   .then(data => setCards(data))
  },[])
+ 
+ const handleSearch = (text) =>{
+  console.log(text);
+  const matchingCards = cards.filter(card => card.category_name === text)
+  setCards(matchingCards);
+ }
 
   return (
     <>
       <header className="mb-28">
         <div
-          className="hero  bg-cover"
+          className="hero bg-cover"
           style={{
             backgroundImage: "url(https://i.ibb.co/nbtf14q/Rectangle-4281.png)",
           }}
@@ -27,7 +34,7 @@ const Home = () => {
           <div className="hero-overlay bg-opacity-95 bg-[#FFFFFFF2]"></div>
           <div className="w-full ">
             <Navbar></Navbar>
-            <Banner></Banner>
+            <Banner cards={cards} handleSearch={handleSearch}></Banner>
           </div>
         </div>
       </header>

@@ -1,4 +1,20 @@
-const Banner = () => {
+// import { useState } from "react";
+import PropTypes from 'prop-types';
+
+const Banner = ({handleSearch}) => {
+ 
+
+
+const handleSubmit = e =>{
+  e.preventDefault()
+  console.log(e.target.search.value);
+  handleSearch(e.target.search.value);
+  
+}
+
+// console.log(searchText);
+
+  
   return (
     <div>
 
@@ -7,22 +23,29 @@ const Banner = () => {
           I Grow By Helping People In Need
         </h1>
 
-        <div className="form-control w-[450px]">
-          <div className="input-group ">
+        <div className="form-control w-[450px]" >
+          <form className="input-group " onSubmit={handleSubmit} >
             <input
               type="text"
+              name="search"
               placeholder="Search…"
-              className="input input-bordered w-9/12"
+              className="input input-bordered w-9/12" 
             />
-            <button className="btn  w-3/12 bg-[#FF444A] font-semibold text-white">
+            <input type="submit" value="Search" className="btn  w-3/12 bg-[#FF444A] font-semibold text-white" />
+            {/* <button  className="btn  w-3/12 bg-[#FF444A] font-semibold text-white">
               Search
-            </button>
-          </div>
+            </button> */}
+          </form>
         </div>
       </div>
       
     </div>
   );
+};
+
+Banner.propTypes = {
+  handleSearch:PropTypes.func,
+ 
 };
 
 export default Banner;
