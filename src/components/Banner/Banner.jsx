@@ -18,12 +18,12 @@ const handleSubmit = e =>{
   return (
     <div>
 
-      <div className="text-center flex flex-col justify-center items-center mt-36 pb-[200px]">
-        <h1 className="mb-10 text-5xl font-bold">
+      <div className="text-center flex flex-col justify-center items-center mt-36 pb-8  lg:pb-[200px]">
+        <h1 className="mb-10 text-2xl md:text-3xl lg:text-5xl font-bold">
           I Grow By Helping People In Need
         </h1>
 
-        <div className="form-control w-[450px]" >
+        <div className="form-control lg:w-[450px]" >
           <form className="input-group " onSubmit={handleSubmit} >
             <input
               type="text"

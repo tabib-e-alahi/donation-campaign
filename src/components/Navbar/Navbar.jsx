@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="">
           <AiOutlineMenu onClick={handleToggleNavMenu} className="md:hidden text-3xl"></AiOutlineMenu>
           <ul className={`flex flex-col md:flex-row gap-2 md:gap-10 duration-1000 md:duration-0 absolute right-4 md:static border-2 md:border-0 rounded-lg p-4 md:p-0  shadow-2xl md:shadow-none
-            ${open ? 'top-16 ' : '-right-24'}`}>
+            ${open ? 'top-16' : '-top-64'}`}>
             {links}
           </ul>
         </div>

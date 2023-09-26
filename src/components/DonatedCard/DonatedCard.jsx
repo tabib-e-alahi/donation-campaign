@@ -14,13 +14,13 @@ const DonatedCard = (donatedCard) => {
   return (
    
       <div className="card card-side ">
-        <figure className="w-1/3">
+        <figure className="w-full md:w-1/3">
           <img className="w-full h-full"
             src={img}
             alt=""
           />
         </figure>
-        <div style={{backgroundColor: card_bg}} className="card-body p-6 rounded-r-lg">
+        <div style={{backgroundColor: card_bg}} className="card-body w-full p-6 rounded-r-lg">
 
             <p style={{backgroundColor: category_bg , color:text_button_bg}} className="px-3 py-1 w-max rounded text-sm">{category_name}</p>
 

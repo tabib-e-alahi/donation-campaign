@@ -25,9 +25,9 @@ setDonatedCards(newDonatedCards);
     
    
     return (
-        <div>
+        <div className="max-w-sm  md:max-w-2xl lg:max-w-7xl  mx-auto">
             <Navbar></Navbar>
-            <div className="grid grid-cols-2 gap-6 max-w-7xl mx-auto my-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2  gap-6 mx-auto my-20">
                 {
                     donatedCards.slice(0,showCardsLength).map((donatedCard,idx) => <DonatedCard key={idx} donatedCard={donatedCard}></DonatedCard>)
                 }

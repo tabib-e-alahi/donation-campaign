@@ -32,16 +32,16 @@ const Home = () => {
           }}
         >
           <div className="hero-overlay bg-opacity-95 bg-[#FFFFFFF2]"></div>
-          <div className="w-full ">
+          <div className="w-full">
             <Navbar></Navbar>
             <Banner cards={cards} handleSearch={handleSearch}></Banner>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl  mx-auto mb-44">
+      <main className="w-11/12 lg:max-w-7xl  mx-auto mb-10 md:mb-16 lg:mb-44">
 
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-5 ">
 
           {
 
