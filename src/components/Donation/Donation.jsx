@@ -27,12 +27,12 @@ setDonatedCards(newDonatedCards);
     return (
         <div className="max-w-sm  md:max-w-2xl lg:max-w-7xl  mx-auto">
             <Navbar></Navbar>
-            <div className="grid grid-cols-1 lg:grid-cols-2  gap-6 mx-auto my-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2  gap-6 mx-auto my-40">
                 {
                     donatedCards.slice(0,showCardsLength).map((donatedCard,idx) => <DonatedCard key={idx} donatedCard={donatedCard}></DonatedCard>)
                 }
             </div>
-            <div className={`text-center mt-10 mb-40 ${showCardsLength === donatedCards.length ? 'hidden' : ''}`}>
+            <div className={`text-center mt-5 lg:mt-10 mb-40 ${showCardsLength === donatedCards.length ? 'hidden' : ''}`}>
             <button onClick={()=>setShowCardsLength (donatedCards.length)} className="btn btn-success px-6 text-white font-semibold">See All</button>
             </div>
         </div>
