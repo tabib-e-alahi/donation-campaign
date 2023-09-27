@@ -43,12 +43,12 @@ const DonationDetails = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-sm md:max-w-2xl lg:max-w-7xl mx-auto">
       <Navbar></Navbar>
-      <section className="max-w-7xl mx-auto my-20 rounded-lg ">
+      <section className="  my-36 md:my-20 rounded-lg ">
         <div className="mb-14 relative">
-          <img className="w-full h-[700px] " src={cover_img} alt="" />
-          <div className="absolute bottom-0 bg-[#0B0B0B80] p-10 w-full rounded-b-lg">
+          <img className="w-full lg:h-[700px] rounded-lg" src={cover_img} alt="" />
+          <div className="absolute bottom-0 bg-[#0B0B0B80] p-6 md:p-10 w-full rounded-b-lg">
             <div className="bg-opacity-95 w-full"></div>
             <button
               onClick={handleDonatedCard}
@@ -60,7 +60,7 @@ const DonationDetails = () => {
           </div>
         </div>
         <div>
-          <h1 className="mb-6 text-4xl font-bold">{title}</h1>
+          <h1 className="mb-6 text-3xl md:text-4xl font-bold">{title}</h1>
           <p className="text-justify">{description}</p>
         </div>
       </section>

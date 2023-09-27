@@ -29,6 +29,7 @@ const DonatedCard = (donatedCard) => {
 
           <h2  className="text-2xl font-semibold">{title}</h2>
           <p style={{color:text_button_bg}} className="text-base font-semibold">${price}</p>
+          
           <div className="card-actions ">
             <button onClick={() => navigate(`/home/${id}`)} style={{backgroundColor:text_button_bg}} className="btn text-white">View Details</button>
           </div>
