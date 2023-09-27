@@ -31,7 +31,7 @@ const DonatedCard = (donatedCard) => {
           <p style={{color:text_button_bg}} className="text-base font-semibold">${price}</p>
           
           <div className="card-actions ">
-            <button onClick={() => navigate(`/home/${id}`)} style={{backgroundColor:text_button_bg}} className="btn text-white">View Details</button>
+            <button onClick={() => navigate(`/${id}`)} style={{backgroundColor:text_button_bg}} className="btn text-white">View Details</button>
           </div>
         </div>
       </div>

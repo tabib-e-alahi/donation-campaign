@@ -37,9 +37,9 @@ setDonatedCards(newDonatedCards);
                 }
             </div>
 
-            <div className={`text-center mt-5 lg:mt-10 mb-40 ${showCardsLength === donatedCards.length || donatedCards.length <= 0 ? 'hidden' : ''}`}>
+            <div className={`text-center mt-5 lg:mt-10 mb-40 ${ donatedCards.length <= 4 || showCardsLength > 4 ? 'hidden' : ''}`}>
 
-            <button onClick={()=>setShowCardsLength (donatedCards.length)} className="btn btn-success px-6 text-white font-semibold">See All</button>
+            <button onClick={()=>setShowCardsLength(donatedCards.length)} className="btn btn-success px-6 text-white font-semibold">See All</button>
             </div>
         </div>
     );

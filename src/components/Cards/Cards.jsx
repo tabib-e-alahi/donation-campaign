@@ -5,13 +5,13 @@ const Cards = ({ card }) => {
 
   const {id,img, title, category_name, category_bg, card_bg, text_button_bg } =
     card;
-  
+ 
     const navigate = useNavigate()
     
 
     // console.log(parsedCard_bg,parsedCategory_bg,parsedText_button_bg);
     const handleDonationDetails = (id) =>{
-      navigate(`/home/${id}`)
+      navigate(`/${id}`)
     }
     
   return (
