@@ -20,8 +20,18 @@ const DonationDetails = () => {
     donationDetails;
 
   const handleDonatedCard = () => {
-    saveDonatedCard(intId);
+    const exist = saveDonatedCard(intId);
    
+    if(exist === 'exist'){
+      swal({
+        title: "Already Donated",
+        text: "After 48 hours, again you can donate",
+        icon: "error",
+        button: "Close",
+        
+      });
+      return
+    }
    
     swal({
       title: "Successfully Donated",

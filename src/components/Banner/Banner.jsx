@@ -7,7 +7,7 @@ const Banner = ({handleSearch}) => {
 
 const handleSubmit = e =>{
   e.preventDefault()
-  console.log(e.target.search.value);
+  // console.log(e.target.search.value);
   handleSearch(e.target.search.value);
   
 }

@@ -77,7 +77,7 @@ const Statistics = () => {
           </PieChart>
         </ResponsiveContainer>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 mt-10 md:mt-16">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 mt-10 ">
         <p className="flex items-center justify-center gap-2 text-lg">Your Donation <hr className="w-[100px] bg-[#00C49F] h-3 rounded-sm" /></p>
         <p className="flex items-center justify-center gap-2 text-lg">Total Donation <hr className="w-[100px] bg-[#FF444A] h-3 rounded-sm" /></p>
       </div>

@@ -14,7 +14,9 @@ const saveDonatedCard = id =>{
      if(!isExists){
         storedDonatedCards.push(id);
         localStorage.setItem('card-donated',JSON.stringify(storedDonatedCards))
+        return
      }
+     return 'exist'
 
 }
 

@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const DonatedCard = (donatedCard) => {
     // console.log(donatedCard);
+    const navigate = useNavigate()
   const {
+    id,
     img,
     title,
     category_name,
@@ -27,7 +30,7 @@ const DonatedCard = (donatedCard) => {
           <h2  className="text-2xl font-semibold">{title}</h2>
           <p style={{color:text_button_bg}} className="text-base font-semibold">${price}</p>
           <div className="card-actions ">
-            <button style={{backgroundColor:text_button_bg}} className="btn text-white">View Details</button>
+            <button onClick={() => navigate(`/home/${id}`)} style={{backgroundColor:text_button_bg}} className="btn text-white">View Details</button>
           </div>
         </div>
       </div>
